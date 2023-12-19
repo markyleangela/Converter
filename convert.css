@@ -1,0 +1,23 @@
+
+body {
+    margin: 0;
+}
+
+.calculate{
+    background-color: beige;
+    align-content: center;
+}
+
+
+.calculate:hover{
+   background-color: green;
+}
+
+#div1{
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    /* header 50, br 20, conversion 20, dropdown 30, input 50, calculate 50, */
+    grid-template-rows: 50px 20px 20px 30px 50px 50px 1fr 1fr;
+}
