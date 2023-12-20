@@ -67,6 +67,67 @@ function hex_to_dec(input){
     return answer;
 }
 
+function dec_to_bin(input){
+    parseInt(input, 10);
+    var answer = "";
+    while(parseInt(input) != 0){
+        input = parseInt(input) / 2;
+        if(input % 1 == 0){
+            answer+='0';
+        }else{
+            answer+='1';
+        }
+    }
+    return answer.split("").reverse().join(''); 
+}
+
+function dec_to_oct(input){
+    parseInt(input, 10);
+    var answer = "";
+    while(parseInt(input) != 0){
+        var remainder = parseInt(input) % 8;
+        input = parseInt(input) / 8;
+        answer+=remainder;
+    }
+    return answer.split("").reverse().join(''); 
+}
+
+function dec_to_hex(input){
+    parseInt(input, 10);
+    var answer = "";
+    while(parseInt(input) != 0){
+        var remainder = parseInt(input) % 16;
+        input = parseInt(input) / 16;
+
+        switch(remainder){
+            case 10:
+                answer+='A'
+                break;
+            case 11:
+                answer+='B'
+                break;
+            case 12:
+                answer+='C'
+                break;
+            case 13:
+                answer+='D'
+                break;
+            case 14:
+                answer+='E'
+                break;
+            case 15:
+                answer+='F'
+                break;    
+            default:
+                answer+=remainder;
+                break;
+        }
+        
+
+    }
+    return answer.split("").reverse().join(''); 
+}
+
 
 function myFunction(){
     var input = document.getElementById('input_area').value;
@@ -82,9 +143,20 @@ function myFunction(){
          case 'hex_to_dec':
             document.getElementById("answer_label").innerHTML = hex_to_dec(input)
             break;
+
+        case 'dec_to_bin':
+            document.getElementById("answer_label").innerHTML = dec_to_bin(input)
+            break;
+        case 'dec_to_oct':
+            document.getElementById("answer_label").innerHTML = dec_to_oct(input)
+            break;
+        case 'dec_to_hex':
+            document.getElementById("answer_label").innerHTML = dec_to_hex(input)
+            break;
     }
 
 }
+
 
 
 
