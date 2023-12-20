@@ -16,12 +16,26 @@
         <br>
         <label for="coversion_type">Conversion: </label>
         <select name="coversion_type" id="conversion">
-            <option value="bin_to_dec">Binary to Decimal</option>
-            <option value="oct_to_dec">Octal to Decimal</option>
-            <option value="hex_to_dec">Hexadecimal to Decimal</option>
-            <option value="dec_to_bin">Decimal to Binary</option>
-            <option value="dec_to_oct">Decimal to Octal</option>
-            <option value="dec_to_hex">Decimal to Hexadecimal</option>
+            <optgroup label="Base N to Decimal">
+                <option value="bin_to_dec">Binary to Decimal</option>
+                <option value="oct_to_dec">Octal to Decimal</option>
+                <option value="hex_to_dec">Hexadecimal to Decimal</option>
+            </optgroup>
+            <optgroup label="Decimal to Base N">
+                <option value="dec_to_bin">Decimal to Binary</option>
+                <option value="dec_to_oct">Decimal to Octal</option>
+                <option value="dec_to_hex">Decimal to Hexadecimal</option>
+            </optgroup>
+            <optgroup label="Base N to Base N">
+                <option value="bin_to_oct">Binary to Octal</option>
+                <option value="bin_to_hex">Binary to Hexadecimal</option>
+                <option value="oct_to_bin">Octal to Binary</option>
+                <option value="oct_to_hex">Octal to Hex</option>
+                <option value="hex_to_bin">Hexadecimal to Binary</option>
+                <option value="hex_to_oct">Hexadecimal to Octal</option>
+            </optgroup>
+            
+            
 
         </select>
 
