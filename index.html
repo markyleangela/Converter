@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+    <script type="text/javascript" src="convert.js"></script>
+    <link rel="stylesheet" href="convert.css">
+</head>
+
+<body>    
+    
+    <div id="div1">
+        <h1 >UNIT CONVERTER</h1>
+        <br>
+        <label for="coversion_type">Conversion: </label>
+        <br>
+        <select name="coversion_type" id="conversion">
+            <optgroup label="Base N to Decimal">
+                <option value="bin_to_dec">Binary to Decimal</option>
+                <option value="oct_to_dec">Octal to Decimal</option>
+                <option value="hex_to_dec">Hexadecimal to Decimal</option>
+            </optgroup>
+            <optgroup label="Decimal to Base N">
+                <option value="dec_to_bin">Decimal to Binary</option>
+                <option value="dec_to_oct">Decimal to Octal</option>
+                <option value="dec_to_hex">Decimal to Hexadecimal</option>
+            </optgroup>
+            <optgroup label="Base N to Base N">
+                <option value="bin_to_oct">Binary to Octal</option>
+                <option value="bin_to_hex">Binary to Hexadecimal</option>
+                <option value="oct_to_bin">Octal to Binary</option>
+                <option value="oct_to_hex">Octal to Hex</option>
+                <option value="hex_to_bin">Hexadecimal to Binary</option>
+                <option value="hex_to_oct">Hexadecimal to Octal</option>
+            </optgroup>
+            
+            
+
+        </select>
+
+        <input type="text" id="input_area">
+        <button class="button calculate" onclick="myFunction()">CALCULATE</button>
+        <h2 >Answer:</h2>
+        <h2 id="answer_label"></h2>
+    </div>
+
+    
+    
+</body>
+</html>
